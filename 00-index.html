@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Danillo e Letícia ❤️</title>
+
+<style>
+body{
+background-image: url("fundo.jpg");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+font-family: Arial;
+text-align:center;
+margin:0;
+}
+
+h1{
+color:white;
+margin-top:40px;
+}
+
+.galeria{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+padding:20px;
+}
+
+.galeria img{
+width:600px;
+height:auto;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+transition:0.4s;
+}
+
+.galeria img:hover{
+transform:scale(1.1);
+}
+
+button{
+padding:15px 25px;
+background:#ff4d88;
+color:white;
+border:none;
+border-radius:10px;
+font-size:18px;
+cursor:pointer;
+}
+
+.coracao{
+position:fixed;
+animation:subir 4s linear forwards;
+}
+
+@keyframes subir{
+from{transform:translateY(0);opacity:1;}
+to{transform:translateY(-700px);opacity:0;}
+}
+</style>
+</head>
+
+<body>
+
+<h1>nosso cantinho ❤️</h1>
+
+<p style="color:white;font-size:20px;">
+cada momento contigo virou minha memória favorita.
+</p>
+
+<div class="galeria">
+<img src="foto1.png">
+<img src="foto2.png">
+<img src="foto3.png">
+<img src="foto4.png">
+</div>
+
+<button onclick="window.location.href='01-perguntas.html'">
+clica aqui babe hot
+</button>
+
+<audio id="musica" src="musica.mp3"></audio>
+
+<script>
+function surpresa(){
+
+document.getElementById("musica").play();
+
+for(let i=0;i<25;i++){
+let c=document.createElement("div");
+c.className="coracao";
+c.innerHTML="❤️";
+c.style.left=Math.random()*100+"vw";
+c.style.bottom="0";
+c.style.fontSize=Math.random()*30+20+"px";
+document.body.appendChild(c);
+
+setTimeout(()=>c.remove(),4000);
+}
+}
+</script>
+
+</body>
+</html>
